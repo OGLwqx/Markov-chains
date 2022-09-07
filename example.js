@@ -1,0 +1,8 @@
+const generate = require('./index')
+
+const exampleInput = ['Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada eget enim et sollicitudin. Nulla id commodo dolor. Cras placerat molestie accumsan. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum consequat dolor et tincidunt rhoncus. Morbi fringilla mauris vitae tortor semper posuere. Mauris vitae tempor massa. Suspendisse ultricies et nibh sed placerat. Duis malesuada, orci vitae porta lacinia, enim purus commodo elit, eu egestas lacus magna in libero. Aliquam vitae fermentum diam, sed hendrerit elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed fermentum metus ac finibus malesuada.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at convallis dui. Aliquam eu urna vel diam fringilla mollis. Morbi in nisi eget lacus rhoncus auctor non sed urna. Donec ac erat in lectus varius convallis sit amet vitae turpis. Donec non justo eu velit porta finibus. Ut non ante viverra, tincidunt nulla nec, ultrices ipsum. Quisque id ligula egestas, pulvinar urna a, mollis tellus. Aenean ex mauris, viverra nec nulla vitae, ultrices sagittis lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.']
+
+console.log('\nFirst: '+generate('', exampleInput)) // Generation without custom first word and with random length
+console.log('\nSecond: '+generate('sed', exampleInput)) // Random length and specific first word
+console.log('\nThird: '+generate('sed', exampleInput, 25)) // Generates 25 words
+console.log('\nFourth: '+generate('sed', exampleInput, 10, 5)) // Generates from 5 to 10 words
